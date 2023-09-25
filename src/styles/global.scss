@@ -1,0 +1,101 @@
+@import url('../assets/fonts/helvetica/style-font.scss');
+@import url('../assets/fonts/orbitron/orbitron-stylesheet.scss');
+@import url('../assets/fonts/inter/inter-stylesheet.scss');
+
+html,
+body {
+  padding: 0 !important;
+  margin: 0;
+  font-family: 'Helvetica Now Display', sans-serif;
+  font-feature-settings: 'tnum' off;
+  line-height: 1.3;
+  font-size: 14px;
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-feature-settings: 'tnum' off;
+  font-family: 'Helvetica Now Display', sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Now Display', sans-serif;
+  font-feature-settings: 'tnum' off;
+}
+
+span {
+  font-family: 'Helvetica Now Display', sans-serif;
+  font-feature-settings: 'tnum' off;
+}
+
+.ant-table,
+.ant-input {
+  font-feature-settings: 'tnum' off;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  padding-inline-start: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1;
+  font-feature-settings: 'tnum' off;
+  font-family: 'Helvetica Now Display', sans-serif;
+}
+
+ol li,
+ul li {
+  line-height: 1.5em;
+}
+
+hr {
+  border-top: 1px solid #dadada;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  font-feature-settings: 'tnum' off;
+  font-family: 'Helvetica Now Display', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+.color-red {
+  color: red;
+}
+

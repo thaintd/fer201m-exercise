@@ -1,0 +1,62 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  box-shadow: 0px 0px 20px 0px rgba(203, 203, 203, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+  color: #333333;
+}
+
+.title{
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+
+.title h4{
+  text-align: left;
+  span{
+    display: flex;
+  }
+}
+
+.title span{
+  display: flex;
+  align-items: center;
+}
+
+.title span img{
+  width: 20px;
+  height: 20px;
+  
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 10px;
+}
+
+.time{
+
+}
+
+.student {
+  display: flex;
+  align-items: center;
+}
+
+.student img {
+  width: 20px;
+  height: 20px;
+}
+
+.monney{
+  color: #09B451;
+  margin-bottom: 0;
+  font-weight: bold;
+}
