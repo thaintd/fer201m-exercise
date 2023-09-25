@@ -3,16 +3,18 @@
   // background-color: black;
 }
 
-.container, .container-fluid{
-  .row{
-    div{
-      border: 1px solid #ccc;
-    }
+.container,
+.container-fluid {
+  .row {
+    // div{
+    //   border: 1px solid #ccc;
+    // }
+    margin-bottom: 20px;
+    justify-content: space-between;
   }
-
 }
 
-.list-card{
+.list-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
