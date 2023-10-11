@@ -1,0 +1,45 @@
+.banner2 {
+  margin-top: 30px;
+}
+.banner2 > h3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+.banner2-image {
+  width: 392px;
+  height: 461.43px;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 60px;
+}
+.banner2-image img {
+  transition: transform 0.5s ease;
+  transform-origin: top right;
+}
+.banner2-image img:hover {
+  transform: scale(1.2);
+  transform-origin: top right;
+  transition: transform 0.5s ease;
+}
+.banner2-info {
+  margin-top: 80px;
+}
+.banner2-content {
+  margin-top: 0px;
+  margin-left: 100px;
+}
+.banner2-content > h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  width: 500px;
+}
+.banner2-detailInfo {
+  margin: 30px 0;
+}
+.banner2-detailInfo img {
+  margin-right: 30px;
+}

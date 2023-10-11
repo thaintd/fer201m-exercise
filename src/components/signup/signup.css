@@ -1,0 +1,65 @@
+#signUp .background > img {
+  width: 100%;
+}
+
+#signUp .signUp {
+  position: relative;
+}
+.signUp-form {
+  top: 100px;
+  right: 100px;
+  position: absolute;
+  width: 540px;
+  height: 475px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+}
+.signUp-title {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.signUp-btn {
+  display: flex;
+  justify-content: space-around;
+}
+.google {
+  text-align: center;
+  padding-top: 8px;
+  width: 280px;
+  height: 55px;
+  border: 1px solid rgba(66, 133, 244, 1);
+  background-color: rgb(90, 182, 227);
+  border-radius: 10px;
+}
+.google > a {
+  padding-left: 20px;
+  text-decoration: none;
+}
+.facebook {
+  margin-left: 40px;
+}
+.signUp-info {
+  margin: 20px;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+}
+.btn-primary {
+  background-color: rgb(68, 108, 7);
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: rgb(68, 108, 7);
+}
+.btn {
+  width: 150px;
+}
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.signUp-info > p {
+  color: red;
+}

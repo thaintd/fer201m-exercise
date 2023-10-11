@@ -1,33 +1,64 @@
-.App {
-  text-align: center;
-  // background-color: black;
+// .App {
+//   text-align: center;
+//   // background-color: black;
+// }
+
+// .container,
+// .container-fluid {
+//   .row {
+//     // div{
+//     //   border: 1px solid #ccc;
+//     // }
+//     margin-bottom: 20px;
+//     justify-content: space-between;
+//   }
+// }
+
+// .list-card {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: auto;
+//   column-gap: 10px;
+//   row-gap: 30px;
+//   justify-content: center;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+#card-info .card-info {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#card-info .card-info-btn {
+  margin-top: 10px;
+  margin-right: 50px;
+  color: #fff;
+}
+#card-info .card-info-btn button {
+  background-color: rgba(9, 180, 81, 1);
+  border-radius: 30px;
+  padding: 10px 10px;
+  border-style: none;
+  color: #fff;
+}
+.card-info-btn button img {
+  padding: 0 10px;
+}
+.card-info-btn button:hover {
+  background-color: #fff;
 }
 
-.container,
-.container-fluid {
-  .row {
-    // div{
-    //   border: 1px solid #ccc;
-    // }
-    margin-bottom: 20px;
-    justify-content: space-between;
-  }
+#card-info .cardCss {
+  transition: all 0.5s;
 }
-
-.list-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  column-gap: 10px;
-  row-gap: 30px;
-  justify-content: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#card-info .cardCss:hover {
+  transform: translate(0px, -20px);
+  transition: all 0.5s;
 }

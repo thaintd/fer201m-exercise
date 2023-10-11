@@ -1,0 +1,82 @@
+.frame {
+  left: 140px;
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 48px;
+  position: relative;
+}
+
+.frame .div {
+  background-color: #ddffff;
+  border-radius: 5px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+}
+
+.frame .img {
+  height: 40px;
+  left: 17px;
+  position: absolute;
+  top: 10px;
+  width: 40px;
+}
+
+.frame .text-wrapper {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 69px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+}
+
+.frame .div-2 {
+  background-color: #ddffff;
+  border-radius: 5px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 169px;
+}
+
+.frame .akar-icons-chat-dots-wrapper {
+  background-color: #09b451;
+  border-radius: 50px;
+  height: 40px;
+  left: 17px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 40px;
+}
+
+.frame .akar-icons-chat-dots {
+  height: 24px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.frame .div-3 {
+  background-color: #ddffff;
+  border-radius: 5px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 206px;
+}
+
+.frame .div-4 {
+  background-color: #ddffff;
+  border-radius: 5px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 234px;
+}

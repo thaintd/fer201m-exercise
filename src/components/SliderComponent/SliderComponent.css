@@ -1,0 +1,70 @@
+.slider-info {
+  position: relative;
+}
+.slider-slick {
+  position: relative;
+}
+.slider-image {
+  position: relative;
+  display: inline-block;
+}
+
+.slider-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider-content {
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  transform: translate(-50%, -25%);
+  padding: 20px;
+  color: #fff;
+  width: 93%;
+  transition: all 0.25s;
+}
+.slider-info:hover .slider-content {
+  cursor: pointer;
+  transform: translate(-50%, -98%);
+  transition: all 0.25s;
+}
+
+.slider-content h2 {
+  margin-bottom: 15px;
+}
+.slider-slick,
+.slick-slider,
+.slick-initialized {
+  position: relative;
+}
+.slick-arrow {
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+
+.slick-prev {
+  z-index: 1; /* Ensure a high z-index to appear above other elements */
+  left: 10px;
+  position: absolute;
+  background-image: url("./Component\ 40.png") !important;
+}
+.slick-prev:hover {
+  background-image: url("./Component\ 40.png") !important;
+}
+.slick-next {
+  z-index: 1;
+  right: 50px;
+  /* Ensure a high z-index to appear above other elements */
+  position: absolute;
+  background-image: url("./Component\ 39.png") !important;
+}
+.slick-next:hover {
+  background-image: url("./Component\ 39.png") !important;
+}
+/* Hide the default slick navigation icons */
+.slick-slider button::before {
+  display: none !important;
+}

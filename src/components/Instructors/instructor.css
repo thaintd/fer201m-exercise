@@ -1,0 +1,52 @@
+#instructor .instructor > h3 {
+  font-weight: 700;
+}
+.instructor {
+  margin-top: 30px;
+}
+#instructor .ins-info {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#instructor .ins-image {
+  position: relative;
+  width: 84%;
+}
+#instructor .ins-image img {
+  width: 100%;
+  height: auto;
+}
+
+#instructor .ins-content {
+  padding-top: 20px;
+  text-align: center;
+  position: absolute;
+  width: 390px;
+  height: 370px;
+  background-color: #fff;
+  transition: transform 1s, opacity 0.5s;
+  transform-origin: left center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+#instructor .ins-name,
+.ins-role,
+.ins-des {
+  font-size: larger;
+  margin: 10px 30px;
+}
+#instructor .ins-name,
+.ins-role {
+  font-weight: 600;
+}
+.ins-role {
+  color: rgba(9, 180, 81, 1);
+}
+.ins-des {
+  margin-top: 30px;
+}
+#instructor .ins-content:hover {
+  transform: translate(-10%, 0%);
+  opacity: 0;
+}

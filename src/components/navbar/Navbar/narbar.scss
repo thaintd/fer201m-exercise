@@ -1,0 +1,73 @@
+
+.Navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Add a background color for the navbar */
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  align-items: center;
+   
+    .menu{
+      
+      ul{
+        list-style: none;
+        display: flex;
+        gap:30px;
+         margin-top: 36px;
+        font-size: 16px;
+
+        .navList{
+          transition: 0.03s;
+          // margin-top: 2px;
+          &:hover{
+            font-weight: bold;
+            transform: rotateX(360deg);
+            
+
+           
+          }
+        }
+      }
+      
+       
+    }
+
+
+    .landr{
+      margin-top: 25px;
+      margin-right: 50px ;
+      
+    .icon{
+      margin-right: 10px;
+    }
+
+     button.login{
+      background-color: #fff;
+      border: none;
+      color: #09b451;
+      font-size: 16px;
+        border-radius: 4px;
+        padding: 10px 24px;
+     }
+
+      button.register{
+         background-color: #09b451;
+        margin-left: 5px;
+        border: 2px solid #09b451;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px;
+        padding: 10px 24px;
+       
+      }
+
+      .register:hover{
+        background-color:#fff; color: #09b451;
+         transition-duration: 0.4s;
+      }
+    }
+}
+
