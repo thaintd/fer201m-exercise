@@ -6,16 +6,16 @@
   position: relative;
 }
 .signUp-form {
+  padding: 20px;
   top: 100px;
-  right: 100px;
+  right: 500px;
   position: absolute;
   width: 540px;
-  height: 475px;
+  height: 490px;
   background: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
 }
 .signUp-title {
-  margin: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -24,28 +24,22 @@
   justify-content: space-around;
 }
 .google {
+  cursor: pointer;
   text-align: center;
-  padding-top: 8px;
-  width: 280px;
-  height: 55px;
+  width: 268px;
+  height: 42px;
   border: 1px solid rgba(66, 133, 244, 1);
   background-color: rgb(90, 182, 227);
   border-radius: 10px;
 }
-.google > a {
-  padding-left: 20px;
-  text-decoration: none;
-}
+
 .facebook {
   margin-left: 40px;
 }
 .signUp-info {
-  margin: 20px;
   border-radius: 5px;
 }
-a {
-  text-decoration: none;
-}
+
 .btn-primary {
   background-color: rgb(68, 108, 7);
 }

@@ -1,41 +1,125 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signin.css";
 import googleLogo from "../../assets/images/demo/google.png";
 import facebookLogo from "../../assets/images/demo/Group 52.png";
 import appleLogo from "../../assets/images/demo/Group 51.png";
-import { useState, useEffect } from "react";
+import Form from "react-bootstrap/Form";
+import { Link, useNavigate } from "react-router-dom";
+import { PortalService } from "../../lib/service/admin-service";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Signin() {
-  const initialValues = { username: "", password: "" };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+  const navigation = useNavigate();
+  const [error, setError] = useState({ email: null, password: null });
+  const [email, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const validation = () => {
+    let errorData = {
+      email: null,
+      password: null,
+    };
+    if (!email || email.trim() === "") {
+      errorData = {
+        ...errorData,
+        email: "Please enter username",
+      };
+    } else {
+      errorData = {
+        ...errorData,
+        email: null,
+      };
+    }
+    if (!password || password.trim() === "") {
+      errorData = {
+        ...errorData,
+        password: "Please enter password",
+      };
+    } else {
+      errorData = {
+        ...errorData,
+        password: null,
+      };
+    }
+    if (errorData.email || errorData.password) {
+      toast.error("Please fix the following errors:");
+      if (errorData.email) {
+        toast.error(errorData.email);
+      }
+      if (errorData.password) {
+        toast.error(errorData.password);
+      }
+    }
+    setError({ ...errorData });
   };
-  const handleSubmit = (e) => {
+
+  const OnSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
+    if (password.trim() === "" || email.trim() === "" || !password || !email) {
+      validation();
+    } else {
+      setError({
+        email: null,
+        password: null,
+      });
+      const dataSubmit = {
+        email: email,
+        password: password,
+      };
+      await PortalService.getALLUser()
+        .then((res) => {
+          console.log(res);
+          const users = res.data?.filter((user, index) => {
+            if (
+              user?.password === dataSubmit.password &&
+              user?.email === dataSubmit.email
+            ) {
+              return user;
+            }
+          });
+          if (users.length > 0) {
+            const user = users[0];
+            if (user.role === "ADMIN") {
+              localStorage.setItem("users", JSON.stringify(user));
+              navigation("/admin-portal");
+            } else if (user.role === "STUDENT") {
+              localStorage.setItem("users", JSON.stringify(user));
+              navigation("/student");
+            } else if (user.role === "TEACHER") {
+              localStorage.setItem("users", JSON.stringify(user));
+              navigation("/teacher-portal");
+            } else {
+              toast.error(
+                "You don't have permission to access the admin portal."
+              );
+            }
+          } else {
+            toast.error("Username or password incorrect");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log(dataSubmit);
+      return dataSubmit;
+    }
   };
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  });
-  const validate = (values) => {
-    const errors = {};
-    if (!values.username) {
-      errors.username = "Username is required!";
-    }
-    if (!values.password) {
-      errors.password = "Password is required!";
-    }
-    return errors;
-  };
+
   return (
     <div className="signin" id="signin">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="background">
         <img
           src="https://accgroup.vn/wp-content/uploads/2023/02/Background-la-gi.jpg.webp"
@@ -52,48 +136,67 @@ export default function Signin() {
           </div>
           <div className="signin-logo-info">
             <p>No account?</p>
-            <p className="highlight">Sign up</p>
+            <Link to="/register">
+              <p className="highlight" style={{ cursor: "pointer" }}>
+                Sign up
+              </p>
+            </Link>
           </div>
         </div>
-        <div className="signin-btn">
+        <div className="signin-btn d-flex">
           <div className="google">
-            <img src={googleLogo} alt="Google Logo" />
-            <a href="">Sign in with Google</a>
+            <img
+              src={googleLogo}
+              style={{ maxWidth: "30px" }}
+              alt="Google Logo"
+            />
+            <label>Sign in with Google</label>
           </div>
           <div className="facebook">
-            <img src={facebookLogo} alt="Facebook Logo" />
+            <img
+              src={facebookLogo}
+              style={{ maxWidth: "46px" }}
+              alt="Facebook Logo"
+            />
           </div>
           <div className="apple">
-            <img src={appleLogo} alt="Apple Logo" />
+            <img
+              src={appleLogo}
+              style={{ maxWidth: "46px" }}
+              alt="Apple Logo"
+            />
           </div>
         </div>
         <div className="signin-info">
-          <form onSubmit={handleSubmit}>
-            <label>Enter your username or email address</label>
+          <form onSubmit={OnSubmit}>
+            <label className="my-2">Enter your username or email address</label>
             <br />
-            <input
+            <Form.Control
+              id="email"
               type="text"
-              name="username"
-              placeholder="Enter username"
-              onChange={handleChange}
+              maxLength={255}
+              placeholder="Username or email address"
+              value={email}
+              onChange={(e) => setUsername(e.target.value)}
             />
-            <p className="errors">{formErrors.username}</p>
-            <label> Enter your password</label>
+
+            <label className="my-2">Enter your password</label>
             <br />
-            <input
+            <Form.Control
+              id="password"
               type="password"
-              name="password"
+              maxLength={255}
               placeholder="Password"
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <p className="errors">{formErrors.password}</p>
-            <a href="">Forgot Password</a>
+
+            <label className="my-2">Forgot Password</label>
             <br />
             <button type="submit" className="btn btn-primary">
               Sign in
             </button>
           </form>
-          <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         </div>
       </div>
     </div>

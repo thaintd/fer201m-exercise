@@ -1,0 +1,288 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "username": "admin@fpt.com",
+      "password": "admin@123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "teacher@fpt.com",
+      "password": "teacher@123",
+      "role": "TEACHER"
+    },
+    {
+      "id": 3,
+      "username": "teacher2@fpt.com",
+      "password": "teacher2@123",
+      "role": "TEACHER"
+    },
+    {
+      "id": 4,
+      "username": "student@fpt.com",
+      "password": "student@123",
+      "role": "STUDENT"
+    },
+    {
+      "id": 5,
+      "username": "student2@fpt.com",
+      "password": "student2@123",
+      "role": "STUDENT"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin@fpt.com",
+      "password": "admin@123",
+      "role": "ADMIN",
+      "name": "Administrator",
+      "email": "admin@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
+    },
+    {
+      "name": "teacher1",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "teacher@fpt.com",
+      "role": "TEACHER",
+      "password": "teacher2@123",
+      "classroom": "Class A",
+      "id": 2
+    },
+    {
+      "name": "teacher2",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "teacher2@fpt.com",
+      "role": "TEACHER",
+      "classroom": "Class B",
+      "id": 3
+    },
+    {
+      "name": "student",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "student@fpt.com.vn",
+      "role": "STUDENT",
+      "password": "student@123",
+      "classroom": "Class A",
+      "id": 4
+    },
+    {
+      "name": "student2",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "student2@fpt.com",
+      "role": "STUDENT",
+      "password": "student@123",
+      "classroom": "Class B",
+      "id": 5
+    },
+    {
+      "name": "Nguyễn Trần Duy Thái",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "thaintdse172872@fpt",
+      "role": "TEACHER",
+      "classroom": "Class C",
+      "id": 6
+    },
+    {
+      "name": "Nguyễn Trần Duy ",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "email": "thaintdse172872@fpt.edu.vn",
+      "role": "STUDENT",
+      "password": "student@123",
+      "classroom": "Class B",
+      "id": 9
+    },
+    {
+      "role": "STUDENT",
+      "email": "thaintdse172872@fpt.edu.vn",
+      "name": "Nguyễn Trần Duy Bình",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "classroom": "Class A",
+      "password": "student@123",
+      "id": 10
+    },
+    {
+      "role": "STUDENT",
+      "email": "duythai12022003@gmail.com",
+      "name": "Nguyễn Trần Duy Thái",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "classroom": "Class C",
+      "password": "student@123",
+      "id": 11
+    },
+    {
+      "role": "STUDENT",
+      "email": "duythai@gmail.com",
+      "name": "Nguyễn Trần Duy Trì",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg",
+      "classroom": "Class A",
+      "password": "student@123",
+      "id": 12
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 1,
+      "title": "Learn Marketing from Top Instructors.",
+      "money": "30.5$",
+      "author": "typicode"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "messages": "Hello",
+      "sender": "admin"
+    },
+    {
+      "id": 2,
+      "title": "Learn Marketing from Top Instructors.",
+      "messages": "Hello",
+      "sender": "mr.su"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "landing-page": {
+    "banner-section": {
+      "image": ""
+    }
+  },
+  "courses": [
+    {
+      "image": "/assets/image/workTogether.png",
+      "title": "Learn Marketing From Top Instructors",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/image2.png",
+      "title": "Front-end development is not hard as you think",
+      "rate": "4.5",
+      "weeks": 3,
+      "students": 1200,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/ux.png",
+      "title": "Everrything you need to know in UX",
+      "rate": "4.5",
+      "weeks": 7,
+      "students": 1000,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Ease.png",
+      "title": "Learn photography with ease",
+      "rate": "4.5",
+      "weeks": 5,
+      "students": 2500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/DataAnalysis.png",
+      "title": "Be a pro in data analysis",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 5500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Hacking.png",
+      "title": "Ethical Harking is not hard as you think",
+      "rate": "4.5",
+      "weeks": 4,
+      "students": 4500,
+      "price": "30.5$"
+    }
+  ],
+  "skills": [
+    {
+      "image": "/assets/image/skill1.png",
+      "title": "All you need in Business Strategy",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/skill2.png",
+      "title": "The amazing hack in Figma prototyping",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/skill1.png",
+      "title": "Introduction to basic game developement",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Ease.png",
+      "title": "Learn photography with ease",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/DataAnalysis.png",
+      "title": "Be a pro in data analysis",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Hacking.png",
+      "title": "Ethical Harking is not hard as you think ",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Marketing",
+      "image": "/assets/image/Marketing-cartegories.png"
+    },
+    {
+      "title": "Design",
+      "image": "/assets/image/Design-cartegories.png"
+    },
+    {
+      "title": "Programming",
+      "image": "/assets/image/programing.png"
+    },
+    {
+      "title": "Technology",
+      "image": "/assets/image/Technology.png"
+    },
+    {
+      "title": "Marketing",
+      "image": "/assets/image/Marketing-cartegories.png"
+    },
+    {
+      "title": "Design",
+      "image": "/assets/image/Design-cartegories.png"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./signup.css";
+import { Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 export default function SignUp() {
@@ -46,7 +47,6 @@ export default function SignUp() {
           alt="Background"
         />
       </div>
-      <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       <div className="signUp-form">
         <div className="signUp-title">
           <div className="signUp-logo">
@@ -61,10 +61,10 @@ export default function SignUp() {
           </div>
         </div>
         <div className="signUp-info">
-          <form onSubmit={handleSubmit}>
-            <label>Enter your username</label>
+          <Form onSubmit={handleSubmit}>
+            <label className="my-2">Enter your username</label>
             <br />
-            <input
+            <Form.Control
               type="text"
               name="username"
               className="signUp-info"
@@ -76,9 +76,9 @@ export default function SignUp() {
             <br />
             <div className="userInfo">
               <div className="email">
-                <label>Email </label>
+                <label className="my-2">Email </label>
                 <br />
-                <input
+                <Form.Control
                   type="email"
                   name="email"
                   placeholder="Enter email"
@@ -88,9 +88,9 @@ export default function SignUp() {
                 <p className="errors">{formErrors.email}</p>
               </div>
               <div className="phone">
-                <label>Contact number</label>
+                <label className="my-2">Contact number</label>
                 <br />
-                <input
+                <Form.Control
                   type="phone"
                   name="phone"
                   placeholder="Enter phone"
@@ -103,7 +103,7 @@ export default function SignUp() {
             <br />
             <label> Enter your password</label>
             <br />
-            <input
+            <Form.Control
               type="password"
               name="password"
               className="signUp-info"
@@ -116,7 +116,7 @@ export default function SignUp() {
             <button type="submit" className="btn btn-primary">
               Sign up
             </button>
-          </form>
+          </Form>
         </div>
       </div>
     </div>

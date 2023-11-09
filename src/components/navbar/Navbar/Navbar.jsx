@@ -2,8 +2,10 @@ import React from "react";
 import "./narbar.scss";
 import { BsSearch } from "react-icons/bs";
 import l1 from "../../../assets/images/demo/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="Navbar">
       <div className="logoDiv">
@@ -22,8 +24,12 @@ const Navbar = () => {
 
       <div className="landr">
         <BsSearch className="icon" />
-        <button className="login">Login</button>
-        <button className="register">Register</button>
+        <button className="login" onClick={() => navigate("/login")}>
+          Login
+        </button>
+        <button className="register" onClick={() => navigate("/register")}>
+          Register
+        </button>
       </div>
     </div>
   );
